@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--====styling=====-->
+    <link rel="stylesheet" href="style.css">
+    <!--===Poppins===-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+<!--======Boxicons======-->
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section class="hero">
+        <header>
+            <nav class="nav">
+                <ul>
+                    <li><a href="" class="nav__logo">Logo</a></li>
+                </ul>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="" class="nav_link">Login</a></li>
+                        <li class="nav__item"><a href="" class="nav_link btn">Create an account</a></li>
+                    </ul>
+                </div>
+                <ul class="nav__toogle" id="nav-toggle" >
+                    <i class='bx bxs-grid '></i>
+                </ul>
+                  
+            </nav>
+
+        </header>
+        <section class="ads">
+            <div class="ad-silver">
+                <div class="ad_img-container">
+                    <div class="img">
+                        <img src="img/logo-colour.d534143b.svg" alt="">
+                    </div>  
+                </div>
+                <div class="description">
+                    <h2 class="data">Coca cola <span class="close"><i class='bx bx-x'></i></span></h2>
+                    <p class="desc">The essential app for every designer. Generate and collect beautiful color palettes on the go.</p>
+                    <a href="">Visit now</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="hero-body section">
+            <div class="hero__img ">
+                <img src="img/undraw_Questions_re_1fy7.svg" alt="">
+            </div>
+            <div class="hero__data">
+                <h1 class="home__welcome">Next game starts in</h1>
+                <section class="countdown-container">
+                    <table>
+                        <tr class="countdown">
+                            <td id="days"></td>
+                            <td id="hours"></td>
+                            <td id="minutes"></td>
+                            <td id="seconds"></td>
+                        </tr>
+                        <tr class="title">
+                            <td>Days</td>
+                            <td>Hours</td>
+                            <td>Minutes</td>
+                            <td>Seconds</td>
+                        </tr>
+                    </table>
+                </section>
+                <div class="hero__btns">
+                    <button class="button" id="copy-btn" ><i class='bx bxs-share ' ></i>Share</button>
+                    <a href=""  class="button-light">Register</a>
+                </div>
+                <p id="copied-msg">Copied!</p>
+            </div>
+        </section>
+
+</body>
+<script src="main.js"></script>
+<script type="text/javascript">
+    function countdown(){
+        var now = new Date();
+        var eventDate = new Date(2021, 2, 1);
+        var currentTime = now.getTime();
+        var eventTime = eventDate.getTime();
+        var remTime = eventTime - currentTime
+        var seconds = Math.floor(remTime/1000);
+        var minutes = Math.floor(seconds / 60)
+        var hour = Math.floor(minutes / 60)
+        var days  = Math.floor(hour / 24)
+         hour %= 24
+         minutes %= 60
+         seconds %= 60
+         if(hour < 10){
+             hour = "0" + hour;
+         }
+         if(minutes < 10){
+            minutes = "0" + minutes;
+        }
+         if(seconds < 10){
+            seconds = "0" + seconds;
+        }
+        document.getElementById("days").innerText = days 
+        document.getElementById("hours").innerText = hour ;
+        document.getElementById("minutes").innerText = minutes;
+        document.getElementById("seconds").innerText = seconds;
+        setTimeout(countdown, 1000)
+
+
+    }
+    countdown()
+</script>
+</html>
