@@ -307,11 +307,12 @@ a,p,h1,h2,h3,h4,h5,h6{
 
 /*===== FOOTER =====*/
 .section{
-    padding-top: 0.5rem;
+    padding-top:1.5rem;
     padding-bottom: 0rem;
     padding-left: 0.2rem;
     padding-right: 0.2rem;
-    margin: 1.5rem;
+    margin: 2rem;
+
 }
 .footer__container{
    display: grid;
