@@ -488,7 +488,7 @@ a,p,h1,h2,h3,h4,h5,h6{
     
 }
 
-@media screen and (min-width:1020px){
+@media screen and (min-width:1030px){
     .hero__title{
         font-size: 2rem;
         text-align: start;
