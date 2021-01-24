@@ -50,6 +50,6 @@ copyBtn.addEventListener("click",function(){
     copyText()
 })
 copyBtn.addEventListener("click", function(){
-    copiedMsg.style.display="block"
+    copiedMsg.style.display="inline-block"
 })
 

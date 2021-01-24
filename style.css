@@ -171,6 +171,11 @@ a,p,h1,h2,h3,h4,h5,h6{
     text-align: center;
     
 }
+.copied-msg-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 #copied-msg{
     color: rgb(54 177 103);
     display: none;
@@ -180,6 +185,7 @@ a,p,h1,h2,h3,h4,h5,h6{
     background-color: rgb(212, 255, 229);
     font-weight: 700;
     border-radius: 5px;
+    width: fit-content;
 }
 #link{
    display: none;
