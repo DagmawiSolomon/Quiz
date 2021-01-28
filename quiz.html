@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--====styling=====-->
+    <link rel="stylesheet" href="quiz.css">
+    <!--===Poppins===-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+<!--======Boxicons======-->
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section class="header">
+        <i class='bx bx-left-arrow-alt'></i>
+        <div id="countdown">
+            <div id="countdown-number">60</div>
+            <svg>
+              <circle r="18" cx="20" cy="20"></circle>
+            </svg>
+          </div>
+          <ul>
+              <li>Score</li>
+              <li id="score">200</li>
+          </ul>
+    </section>
+    <section class="questions-container">
+        <h1>Question 1<span> / 10</span></h1>
+        <div class="progress">
+            <div class="wright"></div>
+            <div class ="wrong"></div>
+            <div class="wright"></div>
+            <div class ="wrong"></div>
+            <div class ="wrong"></div>
+            <div class ="wrong"></div>
+            <div class ="wrong"></div>
+            <div class ="wrong"></div>
+            <div class ="empty"></div>
+            <div class ="empty"></div>
+        </div>
+        <article class="question">
+            <form action="" method="post">
+                <h3>The entire world's population could fit inside?</h3>
+                    <div class="choice-container">
+                        <div class="custom-choose">
+                            <li>
+                                <input type="radio" id="opt-1" value="Male" name="gender">
+                                <label for="opt-1">
+                                   Los Angeles
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" id="opt-2" value="Male" name="gender">
+                                <label for="opt-2">
+                                    Dubai
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" id="opt-3" value="Male" name="gender">
+                                <label for="opt-3">
+                                    Berlin
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" id="opt-4" value="Male" name="gender">
+                                <label for="opt-4">
+                                  New york
+                                </label>
+                            </li>
+
+                        </div>
+
+                    </div>
+                    
+
+                </div>
+
+                <div class="btn">
+                    <button type="submit" class="next">Next <i class='bx bx-right-arrow-alt'></i></button>
+                </div>
+            </form>
+        </article>
+        
+    </section>
+</body>
+<script>
+    var countdownNumberEl = document.getElementById('countdown-number');
+    var countdown = 60;
+    countdownNumberEl.textContent = countdown;
+    setInterval(function() {
+        countdown = --countdown <= 0 ? 60 : countdown;
+        countdownNumberEl.textContent = countdown;
+    }, 1000);
+</script>
+</html>
