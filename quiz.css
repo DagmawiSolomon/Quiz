@@ -28,6 +28,9 @@ list-style: none;
   top:-20px;
   text-align: center;
 }
+.header i{
+  cursor: pointer;
+}
 #score{
   font-weight: 700;
 }
@@ -184,6 +187,8 @@ svg circle {
   font-family: "poppins", sans-serif;
   font-size: 14pt;
   float: right;
+  outline: none;
+  cursor: pointer;
 }
 .next i{
   position: relative;
