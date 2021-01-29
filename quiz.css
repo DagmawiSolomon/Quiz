@@ -2,6 +2,11 @@
 html{
    overflow: hidden;
 }
+a{
+  color:#141414;
+  text-decoration: none;
+}
+
 body{
     margin: 0;
     padding: 0;
