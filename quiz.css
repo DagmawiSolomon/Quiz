@@ -1,11 +1,11 @@
+
 html{
-    scroll-behavior: smooth;
+   overflow: hidden;
 }
 body{
     margin: 0;
     padding: 0;
     font-family: "poppins", sans-serif;
-    overflow-x: hidden;
 }
 svg{
   position: fixed;
@@ -34,23 +34,30 @@ list-style: none;
 #score{
   font-weight: 700;
 }
-.questions-container{
+.body-container{
     width: 100%;
     margin: auto;
     padding: 0.5rem;
 }
-.questions-container h1{
+.body-container h1{
     text-align: start;
     margin: 0.6rem 1rem;
     
-  
 }
-.questions-container span{
+.body-container span{
   font-size: 12pt;
+}
+.questions-container{
+  display: grid;
+  grid-template-columns: 100% 100% 100% 100% 100%;
+
 }
 .question{
     padding: 5px;
     margin: 2rem 0;
+    width: 100%;
+   
+    
 }
 .question h3{
    margin: 0.5rem;
@@ -205,7 +212,7 @@ svg circle {
 }
 
 @media screen and (min-width:768px){
-  .questions-container{
+  .body-container{
     width: 85%;
     margin: auto;
   }
@@ -229,7 +236,7 @@ svg circle {
   }
 }
 @media screen and (min-width:1020px){
-  .questions-container{
+  .body-container{
     width: 70%;
     margin: auto;
   }

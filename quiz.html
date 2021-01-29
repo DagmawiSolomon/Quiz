@@ -25,7 +25,7 @@
               <li id="score">200</li>
           </ul>
     </section>
-    <section class="questions-container">
+    <section class="body-container">
         <h1>Question 1<span> / 10</span></h1>
         <div class="progress">
             <div class="wright"><i class='bx bx-check' ></i></div>
@@ -39,48 +39,52 @@
             <div class ="empty"></div>
             <div class ="empty"></div>
         </div>
-        <article class="question">
-            <form action="" method="post">
-                <h3>The entire world's population could fit inside?</h3>
-                    <div class="choice-container">
-                        <div class="custom-choose">
-                            <li>
-                                <input type="radio" id="opt-1" value="Male" name="gender">
-                                <label for="opt-1">
-                                   Los Angeles
-                                </label>
-                            </li>
-                            <li>
-                                <input type="radio" id="opt-2" value="Male" name="gender">
-                                <label for="opt-2">
-                                    Dubai
-                                </label>
-                            </li>
-                            <li>
-                                <input type="radio" id="opt-3" value="Male" name="gender">
-                                <label for="opt-3">
-                                    Berlin
-                                </label>
-                            </li>
-                            <li>
-                                <input type="radio" id="opt-4" value="Male" name="gender">
-                                <label for="opt-4">
-                                  New york
-                                </label>
-                            </li>
-
+        <section class="questions-container">
+            <article class="question">
+                <form action="" method="post">
+                    <h3>The entire world's population could fit inside?</h3>
+                        <div class="choice-container">
+                            <div class="custom-choose">
+                                <li>
+                                    <input type="radio" id="opt-1" value="Male" name="gender">
+                                    <label for="opt-1">
+                                       Los Angeles
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="opt-2" value="Male" name="gender">
+                                    <label for="opt-2">
+                                        Dubai
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="opt-3" value="Male" name="gender">
+                                    <label for="opt-3">
+                                        Berlin
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="opt-4" value="Male" name="gender">
+                                    <label for="opt-4">
+                                      New york
+                                    </label>
+                                </li>
+    
+                            </div>
+    
                         </div>
-
+                        
+    
                     </div>
-                    
-
-                </div>
-
-                <div class="btn">
-                    <button type="submit" class="next">Next <i class='bx bx-right-arrow-alt'></i></button>
-                </div>
-            </form>
-        </article>
+    
+                    <div class="btn">
+                        <button type="submit" class="next" id="next__btn">Next <i class='bx bx-right-arrow-alt'></i></button>
+                    </div>
+                </form>
+            </article>
+           
+        </section>
+        
         
     </section>
 </body>
@@ -89,8 +93,18 @@
     var countdown = 60;
     countdownNumberEl.textContent = countdown;
     setInterval(function() {
-        countdown = --countdown <= 0 ? 60 : countdown;
+        countdown = -- countdown
+        if (countdown <= 0){
+            countdown = 60
+        }
+        else if(countdown < 10){
+            countdown = "0" + countdown
+        }
         countdownNumberEl.textContent = countdown;
+
+
     }, 1000);
+
 </script>
+<script src="slider.js"></script>
 </html>
