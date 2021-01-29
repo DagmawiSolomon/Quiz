@@ -37,7 +37,7 @@ copyBtn.addEventListener("click",function(){
         fakeElement.style.position = 'fixed';
         fakeElement.style.top = '100%';
         fakeElement.readOnly = true;
-        fakeElement.value = "https://www.google.com/";
+        fakeElement.value = "https://nifty-lovelace-c01f87.netlify.app/";
         document.body.appendChild(fakeElement);
     
         fakeElement.select();
